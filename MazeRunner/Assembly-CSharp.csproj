@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\GroundController.cs" />
      <Compile Include="Assets\Scripts\LightController.cs" />
+     <Compile Include="Assets\Scripts\MenuScript.cs" />
      <Compile Include="Assets\Scripts\MouseOrbit.cs" />
      <Compile Include="Assets\Scripts\MouseOrbitV2.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
