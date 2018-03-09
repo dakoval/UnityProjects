@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Wall
   - MoveWall
+  - Rock
+  - Health
   layers:
   - Default
   - TransparentFX

@@ -758,7 +758,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1459,8 +1459,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Can you escape? \n\nTry to escape the deadly maze by using the arrow keys
-    and your wits to get out of the maze unscathed and find out  what lies beyond
+  m_Text: "Can you escape? \n\nTry to escape the deadly maze by using the arrow keys,
+    while avoiding rocks falling from above, and did I mention, you only have 3 lives.
+    \ Use your wits to get out of the maze unscathed and find out  what lies beyond
     the maze!!!"
 --- !u!222 &1801409540
 CanvasRenderer:

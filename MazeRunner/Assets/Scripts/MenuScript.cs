@@ -7,8 +7,8 @@ public class MenuScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
-	}
+        SceneManager.UnloadSceneAsync("Game");
+    }
     public void Play()
     {
         SceneManager.LoadScene("Game");
@@ -20,6 +20,6 @@ public class MenuScript : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-		
-	}
+        
+    }
 }

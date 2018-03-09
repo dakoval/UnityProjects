@@ -2,15 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
     private Rigidbody rb;
     public float speed;
+    private int health = 3;
+    public Text healthText;
+    public Text lose;
 
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody>();
-	}
+        healthText.text = "Health "+health;
+        lose.enabled= false;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -24,8 +30,26 @@ public class PlayerController : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Finish"))
         {
-            SceneManager.LoadScene("Start");
+            SceneManager.UnloadSceneAsync("Game");
+            SceneManager.LoadScene("GameWin");
         }
+        if (other.gameObject.CompareTag("Rock"))
+        {
+           --health;
+            healthText.text = "Health "+health;
+            if (health <= 0)
+            {
+                lose.enabled = true;
+                StartCoroutine(Wait());
+            }
+        }
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(3);
+        SceneManager.UnloadSceneAsync("Game");
+        SceneManager.LoadScene("Start");
     }
 
 }
